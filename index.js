@@ -1,5 +1,5 @@
 function removeCss(routeName){
-  var fileName = `/assets/${routeName}.css`;
+  var fileName = '/assets/' + routeName + '.css';
   var links = document.getElementsByTagName('link');
   for (var i = links.length ; i >= 0 ; i--) {
     var link = links[i];
