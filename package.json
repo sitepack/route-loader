@@ -1,0 +1,23 @@
+{
+  "name": "@sitepack/route-loader",
+  "version": "0.1.0",
+  "description": "Router loader for sitepack apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitepack/sitepack-route-loader.git"
+  },
+  "keywords": [
+    "sitepack",
+    "lazymorphic"
+  ],
+  "author": "Jas Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sitepack/sitepack-route-loader/issues"
+  },
+  "homepage": "https://github.com/sitepack/sitepack-route-loader#readme"
+}
