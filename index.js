@@ -4,7 +4,7 @@ function removeCss(routeName){
   for (var i = links.length ; i >= 0 ; i--) {
     var link = links[i];
     if (link && link.getAttribute('href')
-      && link.getAttribute('href').indexOf(filename) != -1) {
+      && link.getAttribute('href').indexOf(fileName) != -1) {
 
       link.parentNode.removeChild(link);
     }
