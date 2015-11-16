@@ -1,3 +1,5 @@
+var routeModules = require('./create-route-modules.js!./dummy.js');
+
 function removeCss(routeName){
   var fileName = '/assets/' + routeName + '.css';
   var links = document.getElementsByTagName('link');
@@ -11,13 +13,12 @@ function removeCss(routeName){
   }
 }
 
-function RouteLaoder(routeModules) {
-  this.routeModules = routeModules;
+function RouteLaoder() {
   var that = this;
 
   this.load = function(routeName, cb) {
     function done(module) {
-      // route module will create a style tag and insert it's css into it.
+      // route module will create a style tag and insert css in it.
       // remove pre-rendered css to avoid duplicated css.
       if (!that.cssRemoved) {
         removeCss(routeName);
@@ -27,7 +28,7 @@ function RouteLaoder(routeModules) {
       cb(module);
     }
 
-    var module = that.routeModules[routeName];
+    var module = routeModules[routeName];
     if (typeof module === 'function') {
       // lazy load module
       module(done);
