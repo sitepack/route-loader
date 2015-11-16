@@ -15,8 +15,5 @@ module.exports =  {
 ${modules.join(',\n')}
 };`;
 
-  console.log(result);
-  console.log('\n\n');
-
   return result;
 };
