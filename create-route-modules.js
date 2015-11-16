@@ -1,11 +1,12 @@
 'use strict';
 
 const path = require('path');
-const fs = require('fs');
 
-const routes = require(path.join(process.cwd(), 'config', 'route.js'));
+module.exports = function() {
+  this.cacheable && this.cacheable();
 
-module.exports = function(source) {
+  const routes = require(path.join(process.cwd(), 'config', 'route.js'));
+
   const modules = routes.map(function(route) {
     return `  ${route.name}: require('bundle?lazy&name=${route.name}!${route.module}')`;
   });

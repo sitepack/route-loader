@@ -1,4 +1,4 @@
-var routeModules = require('./create-route-modules.js!./dummy.js');
+var routeModules = require('./create-route-modules.js!../../../config/route.js');
 
 function removeCss(routeName){
   var fileName = '/assets/' + routeName + '.css';
