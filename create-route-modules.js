@@ -8,7 +8,7 @@ module.exports = function() {
   const routes = require(path.join(process.cwd(), 'config', 'route.js'));
 
   const modules = routes.map(function(route) {
-    return `  ${route.name}: require('bundle?lazy&name=${route.name}!${route.module}')`;
+    return `  '${route.name}': require('bundle?lazy&name=${route.name}!${route.module}')`;
   });
 
   const result = `'use strict';

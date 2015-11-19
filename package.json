@@ -1,6 +1,6 @@
 {
   "name": "@sitepack/route-loader",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Router loader for sitepack apps.",
   "main": "index.js",
   "scripts": {
