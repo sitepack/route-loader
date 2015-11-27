@@ -18,3 +18,16 @@ ${modules.join(',\n')}
 
   return result;
 };
+
+/*
+
+ Output format:
+
+  'use strict';
+  module.exports = {
+    'root': require('bundle?lazy&name=root!/absolute/path/to/root/module'),
+    'about': require('bundle?lazy&name=about!/absolute/path/to/about/module'),
+    'about.me': require('bundle?lazy&name=about.me!/absolute/path/to/about.me/module'),
+  };
+
+ */
